@@ -1,7 +1,5 @@
 
 import java.util.HashMap;
-import java.util.Map;
-import java.util.ArrayList;
 
 public class Program {
 
@@ -11,33 +9,30 @@ public class Program {
     }
 
     public static void printKeysWhere(HashMap<String, String> hashmap, String text) {
-        ArrayList<String> partOfKeys = new ArrayList<>();
+        // ArrayList<String> partOfKeys = new ArrayList<>();
 
         for (String keys : hashmap.keySet()) {
-            if (!keys.contains(text)) {
-                continue;
+            if (keys.contains(text)) {
+                System.out.println(keys);
             }
 
-            // if the key contains the given string
-            // we retrieve the value related to it
-            // and add it tot the set of books to be returned
-            partOfKeys.add(hashmap.get(keys));
-            System.out.println(keys);
+            // partOfKeys.add(hashmap.get(keys));
+            // System.out.println(keys);
         }
 
     }
 
     public static void printValuesOfKeysWhere(HashMap<String, String> hashmap, String text) {
-        ArrayList<String> partOfKeys = new ArrayList<>();
+        // ArrayList<String> partOfKeys = new ArrayList<>();
 
         for (String key : hashmap.keySet()) {
-            if (!key.contains(text)) {
-                continue;
+            if (key.contains(text)) {
+                System.out.println(hashmap.get(key));
             }
-            partOfKeys.add(hashmap.get(key));
+            // partOfKeys.add(hashmap.get(key));
 
         }
-        System.out.println(partOfKeys);
+        // System.out.println(partOfKeys);
 
     }
 
