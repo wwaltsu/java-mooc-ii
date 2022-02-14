@@ -12,13 +12,11 @@ import java.util.HashMap;
  */
 public class Abbreviations {
 
-   
-    HashMap<String, String> abbrevationCollection = new HashMap<>();
+    HashMap<String, String> abbrevationCollection;
 
     public Abbreviations() {
-       
+        this.abbrevationCollection = new HashMap<>();
     }
-    
 
     public void addAbbreviation(String abbreviation, String explanation) {
         abbrevationCollection.put(abbreviation, explanation);
